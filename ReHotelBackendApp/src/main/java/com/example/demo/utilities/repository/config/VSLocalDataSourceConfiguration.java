@@ -20,9 +20,9 @@ public class VSLocalDataSourceConfiguration{
     public DataSource getDataSource() {
         logger.info("Applying VSLocalDataSourceConfiguration");
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
-        dataSourceBuilder.url("jdbc:postgresql://localhost:5432/sampledb");
-        dataSourceBuilder.username("dbuser");
-        dataSourceBuilder.password("dbpassword");
+        dataSourceBuilder.url("jdbc:postgresql://localhost:5432/rehoteldb");
+        dataSourceBuilder.username("rehoteluser");
+        dataSourceBuilder.password("rehotelpassword");
         return dataSourceBuilder.build();
     }
 }
