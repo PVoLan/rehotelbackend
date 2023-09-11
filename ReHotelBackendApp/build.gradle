@@ -37,5 +37,5 @@ springBoot {
 }
 
 bootJar {
-	archiveFileName = 'springdemofull.jar'
+	archiveFileName = 'rehotelfull.jar'
 }

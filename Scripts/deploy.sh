@@ -8,19 +8,20 @@ pressYToContinue (){
 
 }
 
+APP_DIR='../ReHotelBackendApp'
 
 echo ''
 echo '##### Deploy script started'
 echo ''
 echo '##### Building...'
-./gradlew clean assemble
+$APP_DIR/gradlew -p $APP_DIR clean assemble
 echo '##### Build done'
 
 pressYToContinue
 
 echo ''
 echo '##### Uploading...'
-scp ./build/libs/springdemofull.jar ssh.pvolan.ru:demospring/demospringnew.jar
+scp $APP_DIR/build/libs/rehotelfull.jar ssh.pvolan.ru:rehotel/rehotelnew.jar
 echo '##### Upload done'
 
 pressYToContinue

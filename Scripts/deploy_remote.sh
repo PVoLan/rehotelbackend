@@ -1,13 +1,13 @@
-SERVER_COMMAND="java -jar -Dspring.profiles.active=prod demospring.jar"
+SERVER_COMMAND="java -jar -Dspring.profiles.active=prod rehotel.jar"
 
 echo ''
 echo '---- SSH script started'
 
 
 echo ''
-echo '---- Going to demospring folder'
-cd demospring
-echo '---- Done: in demospring folder'
+echo '---- Going to rehotel folder'
+cd rehotel
+echo '---- Done: in rehotel folder'
 
 
 echo ''
@@ -49,9 +49,9 @@ fi
 
 echo ''
 echo '---- Files manipulation: removing old jar'
-rm demospring.jar
+rm rehotel.jar
 echo '---- Files manipulation: Moving new jar'
-mv demospringnew.jar demospring.jar
+mv rehotelnew.jar rehotel.jar
 echo '---- Done: files manipulation'
 
 
