@@ -21,9 +21,9 @@ public class ProdDataSourceConfiguration {
     public DataSource getDataSource() {
         logger.info("Applying ProdDataSourceConfiguration");
         DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
-        dataSourceBuilder.url("jdbc:postgresql://localhost:5432/demospringdb");
-        dataSourceBuilder.username("demospringrole");
-        dataSourceBuilder.password("demospringpassword");
+        dataSourceBuilder.url("jdbc:postgresql://localhost:5432/rehoteldb");
+        dataSourceBuilder.username("rehoteluser");
+        dataSourceBuilder.password("abvofkrkbd"); //Prod config does not listen connections from outside localhost, so it is safe
         return dataSourceBuilder.build();
     }
 }
