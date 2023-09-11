@@ -17,6 +17,6 @@ public class PostInitCommandLine implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        logger.info("******** Initialized spring demo version {} ********", buildProperties.getVersion());
+        logger.info("******** Initialized Re: Hotel version {} ********", buildProperties.getVersion());
     }
 }
