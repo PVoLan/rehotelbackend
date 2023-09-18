@@ -37,5 +37,5 @@ endMessage() {
 
 
 sshRunScript() {
-    ssh ssh.pvolan.ru 'bash -s' < $1
+    cat remote/common.sh $1 | ssh ssh.pvolan.ru 'bash -s'
 }
