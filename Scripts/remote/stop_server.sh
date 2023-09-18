@@ -10,6 +10,8 @@ cd rehotel
 echo '---- Done: in rehotel folder'
 
 
+######################################
+
 echo ''
 echo '---- Checking existing process'
 ps aux | grep "$SERVER_COMMAND"
@@ -39,28 +41,14 @@ OLD_PID2=`pgrep -f "$SERVER_COMMAND"`
 echo "---- Done: Received PID $OLD_PID2"
 if [ ! -z "$OLD_PID2" ]; then
     echo ''
-    echo '---- Server process is still alive, aborting'
+    echo '---- Server process is still alive, please abort'
     exit
 else
     echo ''
-    echo '---- No server process found'
+    echo '---- No server process found, good to go'
 fi
 
-
-echo ''
-echo '---- Files manipulation: removing old jar'
-rm rehotel.jar
-echo '---- Files manipulation: Moving new jar'
-mv rehotelnew.jar rehotel.jar
-echo '---- Done: files manipulation'
-
-
-echo ''
-echo '---- Running server back'
-eval "$SERVER_COMMAND"
-echo '---- Server is up'
-
-
+##############################
 
 echo ''
 echo '---- SSH script completed'

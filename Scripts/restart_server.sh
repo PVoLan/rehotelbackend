@@ -13,25 +13,22 @@ APP_DIR='../ReHotelBackendApp'
 echo ''
 echo '##### Deploy script started'
 echo ''
-echo '##### Building...'
-$APP_DIR/gradlew -p $APP_DIR clean assemble
-echo '##### Build done'
+
+
+
+echo ''
+echo '##### Running SSH: stop server'
+ssh ssh.pvolan.ru 'bash -s' < remote/stop_server.sh
+echo '##### SSH done: stop server'
 
 pressYToContinue
 
 echo ''
-echo '##### Uploading...'
-scp $APP_DIR/build/libs/rehotelfull.jar ssh.pvolan.ru:rehotel/rehotelnew.jar
-echo '##### Upload done'
+echo '##### Running SSH: start server'
+ssh ssh.pvolan.ru 'bash -s' < remote/start_server.sh
+echo '##### SSH done: start server'
 
 pressYToContinue
-
-
-echo ''
-echo '##### Running SSH...'
-ssh ssh.pvolan.ru 'bash -s' < deploy_remote.sh
-echo '##### SSH done'
-
 
 echo ''
 echo '##### Deploy script completed'
