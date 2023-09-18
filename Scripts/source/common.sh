@@ -35,3 +35,7 @@ endMessage() {
     boldEcho "$SCRIPT_NAME finished"
 }
 
+
+sshRunScript() {
+    ssh ssh.pvolan.ru 'bash -s' < $1
+}
