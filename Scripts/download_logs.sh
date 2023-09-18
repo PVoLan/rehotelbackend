@@ -1,2 +1,2 @@
-scp ssh.pvolan.ru:demospring/*.log .
+scp ssh.pvolan.ru:rehotel/*.log .
 
